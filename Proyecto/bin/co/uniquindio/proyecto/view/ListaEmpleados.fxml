@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.ListaEmpleadosController">
+   <children>
+      <TableView fx:id="tablaEmpleados" layoutX="200.0" layoutY="47.0" prefHeight="284.0" prefWidth="600.0" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+        <columns>
+          <TableColumn fx:id="columnaNombre" prefWidth="172.0" text="Nombre" />
+          <TableColumn fx:id="columnaDocumento" prefWidth="178.0" text="Numero documento" />
+            <TableColumn fx:id="columnaCorreo" prefWidth="249.0" text="Correo electronico" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="80.0" layoutY="340.0" spacing="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="80.0" layoutY="340.0" mnemonicParsing="false" onAction="#agregarEmpleado" text="Agregar empleado " />
+            <Button layoutX="178.0" layoutY="355.0" mnemonicParsing="false" onAction="#actualizarDatos" text="Actualizar datos" />
+            <Button layoutX="290.0" layoutY="355.0" mnemonicParsing="false" onAction="#bloquear" text="Bloquear" />
+            <Button layoutX="399.0" layoutY="355.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="265.0" layoutY="14.0" text="Empleados del consecionario" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.VentanaPrincipalEmpleadoController">
+   <children>
+      <GridPane layoutX="255.0" layoutY="96.0" prefHeight="165.0" prefWidth="600.0" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="144.0" layoutY="84.0" mnemonicParsing="false" onAction="#cambiarContrasenia" text="Cambiar contraseña" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button layoutX="140.0" layoutY="99.0" mnemonicParsing="false" onAction="#realizarTransaccion" text="Realizar transaccion" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Button layoutX="260.0" layoutY="339.0" mnemonicParsing="false" onAction="#volver" text="Volver" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" />
+      <Button layoutX="260.0" layoutY="279.0" mnemonicParsing="false" onAction="#usuarios" text="Usuarios" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" />
+   </children>
+</AnchorPane>

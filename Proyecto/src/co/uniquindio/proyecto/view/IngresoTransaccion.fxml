@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.IngresoTransaccionController">
+   <children>
+      <GridPane layoutX="6.0" layoutY="46.0" prefHeight="148.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Tipo de transaccion">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="tipoTransaccion" onAction="#bloquearAcciones" prefWidth="280.0" GridPane.columnIndex="1" />
+            <Label text="Dias alquiler:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="txtDiasAlquiler" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <Label text="Nombre del cliente:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="lblNombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Documento del cliente:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="lblDocumento" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutY="703.0" spacing="30.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="47.0" layoutY="329.0" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+            <Button layoutX="137.0" layoutY="329.0" mnemonicParsing="false" onAction="#editarDetalle" text="Editar detalle" />
+            <Button layoutX="228.0" layoutY="329.0" mnemonicParsing="false" onAction="#agregarDetalle" text="Agregar detalle" />
+            <Button layoutX="444.0" layoutY="329.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableClientes" layoutX="177.0" layoutY="225.0" prefHeight="220.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+        <columns>
+          <TableColumn fx:id="columnNombre" prefWidth="299.0" text="Nombre del usuario" />
+          <TableColumn fx:id="columnDocumento" prefWidth="300.0" text="Documento del usuario" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableDetallesTransaccion" layoutX="200.0" layoutY="459.0" prefHeight="275.0" prefWidth="600.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="430.0">
+        <columns>
+          <TableColumn fx:id="columnVehiculo" prefWidth="181.0" text="Vehiculo" />
+          <TableColumn fx:id="columnCantidad" prefWidth="210.0" text="Cantidad" />
+            <TableColumn fx:id="columnSubtotal" prefWidth="208.0" text="Subtotal" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="111.0" layoutY="846.0" spacing="50.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="111.0" layoutY="846.0" mnemonicParsing="false" onAction="#seleccionarCliente" text="Seleccionar cliente" />
+            <Button layoutX="315.0" layoutY="846.0" mnemonicParsing="false" onAction="#eliminarDetalle" text="Eliminar detalle" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="169.0" layoutY="757.0" spacing="40.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="169.0" layoutY="757.0" text="Total:" />
+            <Label fx:id="lblTotal" layoutX="359.0" layoutY="757.0" text="Label" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

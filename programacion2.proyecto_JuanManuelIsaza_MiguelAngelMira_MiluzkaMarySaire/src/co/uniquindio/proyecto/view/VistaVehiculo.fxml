@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="800.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.VistaVehiculoController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="21.0" layoutY="220.0" prefHeight="533.0" prefWidth="655.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="220.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="301.0">
+               <children>
+                  <GridPane layoutX="35.0" layoutY="122.0" prefHeight="678.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="177.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="146.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Marca:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblMarca" text="N/A" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Modelo:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblModelo" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Velocidad maxima:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblVelocidadMax" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Auton. car. completa:" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblAutonomiaCarga" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Enchufable:" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblEnchufable" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Revisión tecnica:" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblRevisionTec" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Tipo de combustible:" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblTipoCombustible" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Tipo de vehiculo:" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblTipoVehiculo" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Numero de puertas:" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblNumPuertas" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Aire acondicionado:" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblAireAcondicionado" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="ABS:" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblABS" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Numero de ejes:" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblNumEjes" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Frenos de aire:" GridPane.rowIndex="12">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblFrenosAire" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="N. caballos de fuerza:" GridPane.rowIndex="13">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblNumCaballosFuerza" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Capacidad maletero:" GridPane.rowIndex="14">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblCapMaletero" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Capacidad caja carga:" GridPane.rowIndex="15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblCapCajaCarga" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <Label text="Sensores de colisión:" GridPane.rowIndex="16">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                        <Label fx:id="lblSensoresColision" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="16">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane prefHeight="719.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Nuevo:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblNuevo" text="N/A" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Cambios:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblCambios" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Cilindraje:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblCilindraje" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="T. promedio carga:" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblTiempoCarga" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Hibrido ligero:" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblHibriLigero" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Transmisión" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblTransmision" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Numero de pasajeros:" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblNumPasajeros" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="N. de bolsas de aire:" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblNumBolsasAire" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Camara de reversa:" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblCamReversa" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Capacidad de carga:" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblCapacidadCarga" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Tipo de camion:" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblTipoCamion" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="T. alzanza 100Km/h:" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblTiempo100km" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="4x4" GridPane.rowIndex="12">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lbl4x4" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Velocidad de crucero:" GridPane.rowIndex="13">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblVelCrucero" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Sensor traf. cruzado:" GridPane.rowIndex="14">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblSensorTrafCruz" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Asist. perm. carril:" GridPane.rowIndex="15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblAsisPermCarril" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="N. salidas emergencia:" GridPane.rowIndex="16">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label fx:id="lblNumSalidasEmer" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="16">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <Button layoutX="287.0" layoutY="759.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" prefWidth="124.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Volver" textFill="WHITE" AnchorPane.bottomAnchor="6.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Pane layoutX="187.0" layoutY="14.0" prefHeight="191.0" prefWidth="333.0" stylesheets="@../application/application.css">
+         <children>
+            <ImageView fx:id="foto" fitHeight="200.0" fitWidth="286.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <styleClass>
+            <String fx:value="shadowPane" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

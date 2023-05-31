@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" styleClass="shadowPane" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.ReporteController">
+   <children>
+      <SplitPane dividerPositions="0.6691109074243813" layoutX="61.0" layoutY="121.0" prefHeight="514.0" prefWidth="1093.0" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="121.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="610.0" styleClass="shadowPane" stylesheets="@../application/application.css">
+               <children>
+                  <TableView fx:id="tablaTransacciones" layoutX="28.0" layoutY="48.0" onMouseClicked="#seleccionTransaccion" prefHeight="512.0" prefWidth="825.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="columnaFecha" prefWidth="90.0" text="Fecha" />
+                      <TableColumn fx:id="columnaValor" prefWidth="132.0" text="Valor" />
+                        <TableColumn fx:id="columnaTipoTransaccion" prefWidth="160.0" text="Tipo de transacción" />
+                        <TableColumn fx:id="columnaEmpleado" prefWidth="109.0" text="Empleado" />
+                        <TableColumn fx:id="columnaCliente" prefWidth="129.0" text="Cliente" />
+                        <TableColumn fx:id="columnaDiasAlquiler" prefWidth="106.0" text="Días alquiler" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="333.0">
+               <children>
+                  <TableView fx:id="tableDetallesTransaccion" layoutY="80.0" prefHeight="512.0" prefWidth="485.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="columnaSubtotal" prefWidth="138.0" text="Subtotal" />
+                      <TableColumn fx:id="columnaCantidad" minWidth="0.0" prefWidth="69.0" text="Cantidad" />
+                        <TableColumn fx:id="columnaVehiculo" prefWidth="149.0" text="Vehiculo" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER" layoutX="45.0" layoutY="40.0" spacing="100.0" style="-fx-alignment: center;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Tipo de transacción:">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="tipoTransaccion" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="53.0" layoutY="19.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="24.0" text="Fecha inicial:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="fechaInicial" prefHeight="31.0" prefWidth="139.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="276.0" layoutY="19.0">
+               <children>
+                  <Label layoutX="276.0" layoutY="24.0" text="Fecha final:">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="fechaFinal" prefHeight="31.0" prefWidth="139.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox layoutX="25.0" layoutY="679.0" prefHeight="31.0" prefWidth="1176.0" spacing="90.0" style="-fx-alignment: center;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="-12.0">
+         <children>
+            <Button layoutX="232.0" layoutY="561.0" mnemonicParsing="false" onAction="#buscar" prefWidth="140.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Buscar" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#verCliente" prefWidth="140.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Ver cliente" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#verVehiculo" prefWidth="140.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Ver vehiculo" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#verEmpleado" prefWidth="140.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Ver empleado" textFill="WHITE" />
+            <Button layoutX="331.0" layoutY="561.0" mnemonicParsing="false" onAction="#volver" prefWidth="140.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Volver" textFill="WHITE" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

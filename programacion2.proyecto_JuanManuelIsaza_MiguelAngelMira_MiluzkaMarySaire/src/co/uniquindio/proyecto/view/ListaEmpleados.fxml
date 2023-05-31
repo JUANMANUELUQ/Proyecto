@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.ListaEmpleadosController">
+   <children>
+      <Button layoutX="714.0" layoutY="510.0" mnemonicParsing="false" onAction="#actualizarDatos" prefHeight="43.0" prefWidth="173.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Actualizar datos" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="504.0" layoutY="510.0" mnemonicParsing="false" onAction="#agregarEmpleado" prefHeight="43.0" prefWidth="173.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Agregar empleado " textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="79.0" layoutY="510.0" mnemonicParsing="false" onAction="#volver" prefHeight="43.0" prefWidth="173.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Volver" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="288.0" layoutY="510.0" mnemonicParsing="false" onAction="#bloquear" prefHeight="43.0" prefWidth="173.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Bloquear" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="37.0" layoutY="72.0" prefHeight="404.0" prefWidth="911.0" stylesheets="@../application/application.css">
+         <styleClass>
+            <String fx:value="shadowPane" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <TableView fx:id="tablaEmpleados" layoutX="21.0" layoutY="21.0" prefHeight="362.0" prefWidth="869.0">
+              <columns>
+                <TableColumn fx:id="columnaNombre" prefWidth="183.0" text="Nombre" />
+                <TableColumn fx:id="columnaDocumento" prefWidth="220.0" text="Número documento" />
+                  <TableColumn fx:id="columnaCorreo" minWidth="0.0" prefWidth="249.0" text="Correo electronico" />
+                  <TableColumn fx:id="columnaEstado" prefWidth="219.0" text="Estado" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Text layoutX="369.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empleados del Concesionario">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0f4d42e5" />
+                  <Stop color="#27959a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>

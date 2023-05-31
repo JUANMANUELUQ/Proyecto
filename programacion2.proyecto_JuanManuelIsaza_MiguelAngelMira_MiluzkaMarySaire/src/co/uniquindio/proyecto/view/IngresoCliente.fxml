@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="692.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.IngresoClienteController">
+   <children>
+      <Label alignment="CENTER" layoutY="27.0" text="Gestion de Clientes" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font></Label>
+      <Pane layoutX="65.0" layoutY="186.0" prefHeight="376.0" prefWidth="562.0" stylesheets="@../application/application.css">
+         <children>
+            <TableView fx:id="tableClientes" layoutX="23.0" layoutY="18.0" onMouseClicked="#ponerDatos" prefHeight="340.0" prefWidth="516.0">
+              <columns>
+                <TableColumn fx:id="columnNombre" prefWidth="246.0" text="Nombre" />
+                <TableColumn fx:id="columnDocumento" prefWidth="269.0" text="Numero de documento" />
+              </columns>
+            </TableView>
+         </children>
+         <styleClass>
+            <String fx:value="shadowPane" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </Pane>
+      <Button layoutX="191.0" layoutY="584.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="134.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Eliminar" textFill="WHITE" />
+      <Button layoutX="191.0" layoutY="633.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="38.0" prefWidth="134.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Actualizar" textFill="WHITE" />
+      <Button layoutX="369.0" layoutY="584.0" mnemonicParsing="false" onAction="#agregar" prefHeight="38.0" prefWidth="134.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Agregar" textFill="WHITE" />
+      <Button layoutX="369.0" layoutY="633.0" mnemonicParsing="false" onAction="#volver" prefHeight="38.0" prefWidth="134.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Volver" textFill="WHITE" />
+      <Text layoutX="65.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="65.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de documento:">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNombre" layoutX="356.0" layoutY="84.0" prefHeight="31.0" prefWidth="277.0" />
+      <TextField fx:id="txtDocumento" layoutX="356.0" layoutY="134.0" prefHeight="31.0" prefWidth="277.0" />
+   </children>
+</AnchorPane>

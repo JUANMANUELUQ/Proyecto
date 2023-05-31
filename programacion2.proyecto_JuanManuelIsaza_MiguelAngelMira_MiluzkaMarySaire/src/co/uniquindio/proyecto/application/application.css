@@ -1,0 +1,172 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.search_pane{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius:100;
+    
+}
+
+.transparent{
+	-fx-background-color: rgba(0,0,0,0);
+}
+
+.search_button{
+    -fx-background-color: #828282;
+    -fx-background-radius:30;
+}
+
+.right_bar {
+    -fx-background-color: #D3D3D3;
+}
+.shadow {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+}
+    
+.chosen_one{
+	-fx-background-color: #F16C31;
+    -fx-background-radius:30;
+}
+
+.combo1_box{
+	-fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius:30;
+    -fx-border-width:0.5px;
+}
+
+.comboOpciones_box{
+	-fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius:30;
+    -fx-border-radius:30;
+    -fx-border-width:0.5px;
+    -fx-border-color:#CED2CC;
+}
+
+.boton_Admin{
+	-fx-background-color: #FFFFFF;
+    -fx-background-radius:100;
+    -fx-border-width: 1.5;
+    -fx-border-color: #3a9bdc;
+    -fx-border-radius: 50;
+    -fx-opacity: 1.0;
+}
+
+.boton_Admin:hover{
+    -fx-border-color: #04d9ff;
+    -fx-border-width: 2;
+}
+
+.boton_listaEmpleado{
+	-fx-background-color:linear-gradient(to bottom right, #0A8387, #13AFBF);
+    -fx-background-radius:100;
+    -fx-border-width: 1.5;
+    -fx-border-color: #3a9bdc;
+    -fx-border-radius: 50;
+    -fx-opacity: 1.0;
+}
+
+.boton_listaEmpleado:hover{
+    -fx-border-color: #13AFBF;
+    -fx-border-width: 2.5;
+    -fx-text-fill: white;
+}
+
+.custom-separator {
+    -fx-background-color: #FFFFFF; 
+}
+
+
+.Add_Button{
+	-fx-background-color: #FFFFFF;
+    -fx-background-radius:100;
+}
+
+.vehicle_item{
+	-fx-background-color: #FFFFFF;
+    -fx-background-radius:30;
+}
+
+.textArea{
+      -fx-background-color: #232121;
+}
+
+.cursor_hand{
+    -fx-cursor:hand
+}
+.login_button{
+    -fx-background-color: #04d9ff;
+    -fx-border-color:TRANSPARENT;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-opacity: 1.0;
+}
+.login_button:hover{
+    -fx-background-color:#3a9bdc;
+    -fx-border-color: transparent;
+    
+}
+.signup_button{
+	-fx-background-color: transparent
+}
+.signup_button:hover{
+	-fx-background-color: #04d9ff	
+}
+
+.login_buttonsmall{
+    -fx-background-color: #04d9ff
+}
+
+.one_label{
+	-fx-text-fill: #04d9ff;
+	-fx-background-color: transparent;
+}
+
+.one_label:hover {
+    -fx-underline: true;
+    -fx-text-fill: #3a9bdc;
+    -fx-background-color: transparent;
+}
+
+.panel_transparent {
+	-fx-background-color: rgba(255, 255, 255, 0.8);
+	
+		
+}
+
+.shadowPane{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
+
+
+.table-view{
+    -fx-background-color:transparent;
+    -fx-border-color:linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-radius:8px;
+    -fx-padding:0px;
+}
+.table-view .table-column{
+    -fx-alignment:CENTER;
+}
+.table-view .column-header-background{
+    -fx-background-color:linear-gradient(to bottom right, #05515A, #13AFBF);
+    -fx-background-insets: 0 0 0 0;
+    -f-background-radius:8px 8px 0px 0px;
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size:40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill:#fff;
+    -fx-font-family:"Arial";
+}
+
+.table-view .column-header .label,
+.table-view .table-cell {
+    -fx-font-family: "Cambria", serif;
+}
+
+

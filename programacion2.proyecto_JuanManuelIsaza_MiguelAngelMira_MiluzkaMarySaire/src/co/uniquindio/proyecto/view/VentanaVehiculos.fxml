@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.VentanaVehiculosController">
+   <children>
+      <Pane prefHeight="750.0" prefWidth="368.0" styleClass="right_bar" stylesheets="@../application/application.css">
+         <children>
+            <Label layoutX="61.0" layoutY="31.0" text="Vehicles">
+               <font>
+                  <Font name="Cambria Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="31.0" text="Market">
+               <font>
+                  <Font name="Cambria" size="35.0" />
+               </font>
+            </Label>
+            <Pane fx:id="chosenVehicle" layoutX="32.0" layoutY="87.0" prefHeight="626.0" prefWidth="312.0" styleClass="chosen_one" stylesheets="@../application/application.css">
+               <children>
+                  <Label layoutX="39.0" layoutY="248.0" text="Cantidad" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxCantidad" layoutX="219.0" layoutY="247.0" onAction="#accionaComboCant" prefHeight="33.0" prefWidth="70.0" styleClass="combo1_box" stylesheets="@../application/application.css" />
+                  <ImageView fx:id="imageVehicle" fitHeight="176.0" fitWidth="251.0" layoutX="31.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../MOTOCICLETA.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="26.0" layoutY="326.0" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#guardar" prefHeight="39.0" prefWidth="265.0" styleClass="Add_Button" stylesheets="@../application/application.css" text="AÑADIR" textFill="#8d8888">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="24.0" layoutY="365.0" prefHeight="31.0" prefWidth="265.0" />
+                  <Text fx:id="nameVehicle" fill="WHITE" layoutX="39.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mercedes-Benz AMG GT 4-Door Coupe" textAlignment="CENTER" wrappingWidth="238.046875">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="39.0" layoutY="287.0" text="Precio" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceVehicle" layoutX="135.0" layoutY="287.0" prefHeight="30.0" prefWidth="167.0" text="10.000.000" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="33.0" layoutY="396.0" prefHeight="200.0" prefWidth="251.0">
+                     <children>
+                        <TextArea fx:id="textAreaDetalles" layoutX="-7.0" prefHeight="200.0" prefWidth="265.0" text="aaaaaaaa&#10;aaaaaaa&#10;aaaaaaaaa&#10;aaaaaaa&#10;aaaaaaaaa&#10;aaaaaaaaa&#10;aaaaaaaa&#10;aaaaaaaa&#10;aaaaaaaaa&#10;aaaaaaaaa&#10;aaaaaaaaaa&#10;aaaaaaaaaaaa" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="priceSymb" layoutX="115.0" layoutY="288.0" prefHeight="30.0" prefWidth="37.0" text="\$" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="407.0" layoutY="168.0" prefHeight="549.0" prefWidth="962.0" style="-fx-background-color: #022133;">
+         <children>
+            <ScrollPane fx:id="scroll" layoutX="-4.0" layoutY="-4.0" prefHeight="557.0" prefWidth="969.0" styleClass="transparent" stylesheets="@../application/application.css">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="13.0" prefWidth="29.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <ComboBox fx:id="comboBoxFiltrar" layoutX="444.0" layoutY="75.0" onAction="#seleccionarComboFiltro" prefHeight="44.0" prefWidth="312.0" stylesheets="@../application/application.css">
+         <styleClass>
+            <String fx:value="comboOpciones_box" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </ComboBox>
+      <Label layoutX="444.0" layoutY="33.0" text="Filtrar por tipo de vehiculo:">
+         <font>
+            <Font name="Cambria" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="1085.0" layoutY="75.0" mnemonicParsing="false" onAction="#iniciarVentanaDetalles" prefHeight="44.0" prefWidth="251.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Ver más detalles" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

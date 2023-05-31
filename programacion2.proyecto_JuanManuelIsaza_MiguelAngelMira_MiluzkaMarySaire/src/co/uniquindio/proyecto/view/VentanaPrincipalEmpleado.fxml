@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.VentanaPrincipalEmpleadoController">
+   <children>
+      <ImageView fx:id="imageback" fitHeight="682.0" fitWidth="439.0" layoutX="-6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../BACKGROUND%20ADMIN.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="74.0" layoutY="564.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="270.0" stylesheets="@../application/application.css" text="Volver" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass></Button>
+      <Button layoutX="74.0" layoutY="505.0" mnemonicParsing="false" onAction="#usuarios" prefHeight="31.0" prefWidth="270.0" stylesheets="@../application/application.css" text="Usuarios" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass></Button>
+      <Button layoutX="75.0" layoutY="384.0" mnemonicParsing="false" onAction="#cambiarContrasenia" prefHeight="31.0" prefWidth="270.0" stylesheets="@../application/application.css" text="Cambiar contraseña" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="384.0">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass></Button>
+      <Button layoutX="75.0" layoutY="445.0" mnemonicParsing="false" onAction="#realizarTransaccion" prefHeight="31.0" prefWidth="270.0" stylesheets="@../application/application.css" text="Realizar transaccion" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="445.0">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass></Button>
+      <Text fx:id="lblNameEmpleado" fill="WHITE" layoutX="83.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UsuarioName" textAlignment="CENTER" wrappingWidth="223.48800659179688">
+         <font>
+            <Font name="Dubai Medium" size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="140.0" layoutY="251.0" text="Bienvenido" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="44.0" layoutY="343.0" prefHeight="3.0" prefWidth="312.0" styleClass="custom-separator" stylesheets="@../application/application.css" />
+      <ImageView fx:id="iconLabelUser" fitHeight="178.0" fitWidth="200.0" layoutX="122.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="49.0">
+         <image>
+            <Image url="@../../../../../../userIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

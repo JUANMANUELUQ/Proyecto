@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="290.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.ItemController">
+   <children>
+      <ImageView fx:id="imageVehicle" fitHeight="185.0" fitWidth="275.0" layoutX="8.0" layoutY="76.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../III%20Semestre/Programacion%20II/fotos%20Concesionario/renault.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="textName" layoutX="25.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mercedes-Benz AMG GT 4-Door Coupe" textAlignment="CENTER" wrappingWidth="238.046875">
+         <font>
+            <Font name="Cambria" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="textPrice" layoutX="26.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$ 11.500.000" textAlignment="CENTER" wrappingWidth="238.046875">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="textName1" layoutX="59.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock:" textAlignment="CENTER" wrappingWidth="138.046875">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblCantidad" layoutX="182.0" layoutY="290.0" prefHeight="30.0" prefWidth="50.0" text="1">
+         <font>
+            <Font name="Cambria" size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="vehicle_item" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

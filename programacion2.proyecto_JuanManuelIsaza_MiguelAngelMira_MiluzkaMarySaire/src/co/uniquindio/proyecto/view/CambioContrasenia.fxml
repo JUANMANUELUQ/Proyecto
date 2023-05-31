@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.CambioContraseniaController">
+   <children>
+      <ImageView fx:id="back" fitHeight="661.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../BACKGROUND%20ADMIN.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="64.0" layoutY="144.0" text="Contraseña antigua:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contraseniaAntigua" layoutX="63.0" layoutY="192.0" prefHeight="31.0" prefWidth="276.0" promptText="Ingresar contraseña antigua" />
+      <Label layoutX="62.0" layoutY="250.0" text="Contraseña nueva:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contraseniaNueva" layoutX="64.0" layoutY="291.0" prefHeight="31.0" prefWidth="276.0" promptText="Ingresar contraseña nueva" />
+      <Label layoutX="63.0" layoutY="343.0" text="Otra vez contraseña nueva:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contraseniaConfirmacion" layoutX="64.0" layoutY="385.0" prefHeight="31.0" prefWidth="276.0" promptText="Ingresar contraseña nueva" />
+      <Button layoutX="63.0" layoutY="453.0" mnemonicParsing="false" onAction="#guardar" prefHeight="31.0" prefWidth="276.0" stylesheets="@../application/application.css" text="Guardar">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass>
+      </Button>
+      <Button layoutX="62.0" layoutY="518.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="276.0" stylesheets="@../application/application.css" text="Volver">
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass>
+      </Button>
+      <Separator layoutX="57.0" layoutY="103.0" prefHeight="0.0" prefWidth="276.0" styleClass="custom-separator" stylesheets="@../application/application.css" />
+      <Text fx:id="lblNameEmpleado" fill="WHITE" layoutX="74.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cambio de Contraseña" textAlignment="CENTER" wrappingWidth="254.48800659179688">
+         <font>
+            <Font name="Dubai Medium" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

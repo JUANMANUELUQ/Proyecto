@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.IngresoDatosEmpleadosController">
+   <children>
+      <ImageView fx:id="backgroundAgregarEmpleado" fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../BACKGROUND%20ADMIN.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nombre" layoutX="38.0" layoutY="169.0" prefHeight="31.0" prefWidth="239.0" />
+      <TextField fx:id="contrasenia" layoutX="35.0" layoutY="340.0" prefHeight="31.0" prefWidth="239.0" />
+      <Label layoutX="38.0" layoutY="128.0" text="Nombre:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="218.0" text="Documento:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="documento" layoutX="38.0" layoutY="256.0" prefHeight="31.0" prefWidth="239.0" />
+      <Label layoutX="36.0" layoutY="305.0" text="Contraseña:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="389.0" text="Correo electronico:" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="correo" layoutX="34.0" layoutY="425.0" prefHeight="31.0" prefWidth="239.0" />
+      <Button fx:id="boton" layoutX="225.0" layoutY="502.0" mnemonicParsing="false" onAction="#continuar" prefHeight="31.0" prefWidth="113.0" stylesheets="@../application/application.css" text="Guardar">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass>
+      </Button>
+      <Button layoutX="70.0" layoutY="502.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="113.0" stylesheets="@../application/application.css" text="Volver">
+         <font>
+            <Font name="Dubai Medium" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="boton_Admin" />
+            <String fx:value="cursor_hand" />
+         </styleClass>
+      </Button>
+      <Label fx:id="etiqueta" layoutX="38.0" layoutY="46.0" text="Detalles del Empleado" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="38.0" layoutY="104.0" prefHeight="0.0" prefWidth="328.0" styleClass="custom-separator" stylesheets="@../application/application.css" />
+   </children>
+</AnchorPane>

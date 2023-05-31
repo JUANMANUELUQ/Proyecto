@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.IngresoTransaccionController">
+   <children>
+      <GridPane layoutX="18.0" layoutY="46.0" prefHeight="170.0" prefWidth="565.0" stylesheets="@../application/application.css" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Tipo de transaccion">
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="tipoTransaccion" onAction="#bloquearAcciones" prefWidth="250.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin></ComboBox>
+            <Label text="Dias alquiler:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="txtDiasAlquiler" prefHeight="31.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </GridPane.margin></TextField>
+            <Label text="Nombre del cliente:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="lblNombre" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin></Label>
+            <Label text="Documento del cliente:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="lblDocumento" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin></Label>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadowPane" />
+         </styleClass>
+      </GridPane>
+      <TableView fx:id="tableClientes" layoutX="18.0" layoutY="209.0" prefHeight="170.0" prefWidth="565.0" stylesheets="@../application/application.css" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="209.0">
+        <columns>
+          <TableColumn fx:id="columnNombre" prefWidth="299.0" text="Nombre del usuario" />
+          <TableColumn fx:id="columnDocumento" prefWidth="300.0" text="Documento del usuario" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableDetallesTransaccion" layoutX="18.0" layoutY="397.0" prefHeight="180.0" prefWidth="565.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="397.0">
+        <columns>
+          <TableColumn fx:id="columnVehiculo" prefWidth="181.0" text="Vehiculo" />
+          <TableColumn fx:id="columnCantidad" prefWidth="210.0" text="Cantidad" />
+            <TableColumn fx:id="columnSubtotal" prefWidth="208.0" text="Subtotal" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="597.0" spacing="40.0" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <Label layoutX="169.0" layoutY="757.0" text="Total:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="359.0" layoutY="757.0" text="Label" />
+         </children>
+      </HBox>
+      <Button layoutX="38.0" layoutY="641.0" mnemonicParsing="false" onAction="#guardar" prefHeight="31.0" prefWidth="154.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Guardar" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="226.0" layoutY="641.0" mnemonicParsing="false" onAction="#editarDetalle" prefWidth="150.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Editar detalle" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAgregarDetalle" layoutX="409.0" layoutY="641.0" mnemonicParsing="false" onAction="#agregarDetalle" prefWidth="150.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Agregar detalle" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="683.0" mnemonicParsing="false" onAction="#volver" prefHeight="31.0" prefWidth="157.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Volver" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSeleccionarVehiculo" layoutX="409.0" layoutY="641.0" mnemonicParsing="false" onAction="#seleccionarVehiculo" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Seleccionar Vehiculo" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="226.0" layoutY="683.0" mnemonicParsing="false" onAction="#seleccionarCliente" prefHeight="31.0" prefWidth="150.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Seleccionar cliente" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="406.0" layoutY="683.0" mnemonicParsing="false" onAction="#eliminarDetalle" prefHeight="31.0" prefWidth="157.0" styleClass="boton_listaEmpleado" stylesheets="@../application/application.css" text="Eliminar detalle" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

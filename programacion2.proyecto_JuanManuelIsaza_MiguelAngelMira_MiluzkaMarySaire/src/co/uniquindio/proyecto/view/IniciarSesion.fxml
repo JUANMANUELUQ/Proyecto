@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.proyecto.controllers.IniciarSesionController">
+   <children>
+      <ImageView fx:id="imagenPrincipalBackground" fitHeight="666.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Documents/III%20Semestre/TDO/final.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.46" />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="715.0" prefHeight="666.0" prefWidth="486.0" style="-fx-background-color: TRANSPARENT;">
+         <children>
+            <Pane layoutX="66.0" layoutY="100.0" opacity="0.99" prefHeight="436.0" prefWidth="353.0" style="-fx-background-radius: 25;" styleClass="panel_transparent" stylesheets="@../application/application.css">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <children>
+                  <Button layoutX="65.0" layoutY="344.0" mnemonicParsing="false" onAction="#Ingresar" prefHeight="23.0" prefWidth="250.0" stylesheets="@../application/application.css" text="Ingresar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="login_button" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </Button>
+                  <TextField fx:id="txtNombre" layoutX="69.0" layoutY="103.0" prefHeight="30.0" prefWidth="243.0" promptText="Nombre del usuario" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 2; -fx-border-color: #04d9ff;" />
+                  <TextField fx:id="txtCorreo" layoutX="65.0" layoutY="191.0" prefHeight="23.0" prefWidth="250.0" promptText="Correo" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 2; -fx-border-color: #04d9ff;" />
+                  <ImageView fx:id="userLogo" fitHeight="33.0" fitWidth="33.0" layoutX="22.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/logo%20user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emailLogo" fitHeight="33.0" fitWidth="33.0" layoutX="22.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/logo%20email.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="lblOpen_Eye" fitHeight="33.0" fitWidth="33.0" layoutX="22.0" layoutY="276.0" onMouseClicked="#Open_Eye_OnClickAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/open%20eye.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TextField fx:id="txtShowPassword" layoutX="65.0" layoutY="280.0" onKeyReleased="#ShowPasswordOnAction" prefHeight="23.0" prefWidth="250.0" promptText="Password" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 2; -fx-border-color: #04d9ff;" />
+                  <PasswordField fx:id="txtHidePassword" layoutX="65.0" layoutY="280.0" onKeyReleased="#HidePasswordKeyReleased" prefHeight="16.0" prefWidth="250.0" promptText="Contrasenia" style="-fx-border-color: #04d9ff; -fx-border-radius: 50; -fx-border-width: 2; -fx-background-radius: 50; -fx-border-radius: 50;" />
+                  <ImageView fx:id="lblClose_Eye" fitHeight="33.0" fitWidth="33.0" layoutX="22.0" layoutY="281.0" onMouseClicked="#Close_Eye_ClickOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/closed%20eye.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="140.0" layoutY="20.0" text="Login" textFill="#08232f">
+                     <font>
+                        <Font name="Arial Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="392.0" onMouseClicked="#recuperarContrasenia" prefHeight="23.0" prefWidth="169.0" style="-fx-background-color: transparent;" stylesheets="@../application/application.css" text="¿Olvidaste tu contraseña?">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="cursor_hand" />
+                        <String fx:value="one_label" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="68.0" text="NOMBRE">
+                     <font>
+                        <Font name="Dubai Medium" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="157.0" text="CORREO ELECTRONICO">
+                     <font>
+                        <Font name="Dubai Medium" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="245.0" text="CONTRASENIA">
+                     <font>
+                        <Font name="Dubai Medium" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="80.0" prefHeight="666.0" prefWidth="500.0" style="-fx-background-color: #022133;">
+         <children>
+            <ImageView fx:id="logoPic" fitHeight="355.0" fitWidth="345.0" layoutX="85.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/no%20background%20logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="autoTransparente" fitHeight="307.0" fitWidth="600.0" layoutX="-58.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Documents/III%20Semestre/Programacion%20II/ParaExtraer/carone.png" />
+               </image>
+               <effect>
+                  <InnerShadow choke="0.31" radius="68.5" width="255.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="175.0" layoutY="199.0" text="EXPERIENCIA" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="198.0" text="VIVE LA" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="234.0" layoutY="227.0" text="DE MANEJAR TU " textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="382.0" layoutY="227.0" text="SUEÑO" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
